@@ -18,34 +18,25 @@ No API tokens or service accounts needed. Authentication is handled via OAuth 2.
 
 ## Install
 
-If you have the Lendio plugin marketplace configured (same one that provides the workflow plugin):
+### 1. Add the marketplace (one-time)
 
 ```sh
-claude plugin install jira-sync@lendio --scope user
+claude plugin marketplace add TheAlexPorter/claude-plugins
 ```
 
-Commands will be `/jira:*` (the package is `jira-sync`, but the plugin registers as `jira`).
-
-### Manual install
-
-Alternatively, clone and register manually:
+### 2. Install the plugin
 
 ```sh
-git clone https://github.com/TheAlexPorter/jira-sync.git ~/.claude/plugins/jira-sync
+claude plugin install jira-sync@thealexporter --scope user
 ```
+
+Restart Claude Code. Commands will be `/jira:*`.
 
 ### Updating
 
-To update to the latest version:
-
 ```sh
-claude plugin install jira-sync@lendio --scope user
-```
-
-Or if installed manually:
-
-```sh
-git -C ~/.claude/plugins/jira-sync pull
+claude plugin marketplace update thealexporter
+claude plugin install jira-sync@thealexporter --scope user
 ```
 
 ## Setup
@@ -172,7 +163,8 @@ You can also just talk naturally. The plugin picks up on context:
 ## Updating
 
 ```sh
-claude plugin install jira-sync@lendio --scope user
+claude plugin marketplace update thealexporter
+claude plugin install jira-sync@thealexporter --scope user
 ```
 
 Start a new Claude Code session to pick up changes.
