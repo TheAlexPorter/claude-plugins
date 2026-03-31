@@ -1,0 +1,10 @@
+{
+  "name": "thealexporter",
+  "description": "Claude Code plugins by Alex Porter",
+  "plugins": {
+    "jira-sync": {
+      "path": "./jira-sync",
+      "description": "Jira integration — smart context, team boards, ticket management"
+    }
+  }
+}
